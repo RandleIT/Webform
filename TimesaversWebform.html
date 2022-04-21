@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RISKe Timekeepers Intl</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>
+    <script>
+      function SubForm (){
+        $.ajax({
+          url:'https://api.apispreadsheets.com/data/oOhvG3vjnis8JWg1/',
+          type:'post',
+          data:$("#myForm").serializeArray(),
+          success: function(){
+            alert("Form Data Submitted :)")
+          },
+          error: function(){
+            alert("There was an error :(")
+          }
+        });
+      }
+    </script>
+  </head>
+  <style>
+    body {
+    background: url("clock_background.jpg") no-repeat center;
+    background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="main-block">
+      <div class="info">
+        <h1>RISKe Timekeepers</h1>
+        <br>
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i>
+          <h2>Register here</h2>
+        </div>
+        <form id="myForm">
+          <input type="text" name="fname" placeholder="Full name" required>
+          <input type="email" name="myemail" placeholder="Email" required>
+          <input type="tel" name="myphone" placeholder="Phone number" required>
+          <input type="password" name="mypassword" placeholder="Password" required>
+          <input type="number" name="mybsb" placeholder="BSB" required maxlength="6" minlength="6">
+          <input type="number" name="myaccount" placeholder="Account number" required>
+        </form>
+        <div class="checkbox">
+          <br>
+          <input class="checkbox" type="checkbox" name="pcheckbox" required><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">Privacy Poalicy</a></span>
+        </div>
+        <p><br>* All fields are required</p>
+        <button type="submit" onclick="SubForm()">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>

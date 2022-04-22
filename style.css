@@ -29,7 +29,7 @@ h2 {
   background: rgba(0, 0, 0, 0.5);
 }
 form {
-  padding: 25px;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.7);
 }
 .title {
@@ -39,6 +39,7 @@ form {
 }
 .info {
   display: flex;
+  width: 100%;
   flex-direction: column;
   padding-left: 10px;
   padding-right: 10px;

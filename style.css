@@ -105,6 +105,11 @@ html, body {
   flex-direction: row;
   height: calc(100% - 50px);
 }
+.info {
+  flex: 1;
+  height: auto;
+  width: auto;
+}
 form {
   flex: 1;
   height: auto;
